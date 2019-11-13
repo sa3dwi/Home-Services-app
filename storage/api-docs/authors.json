@@ -1,0 +1,356 @@
+{
+    "basePath": "http://api.sadaislam.com/v1",
+    "swaggerVersion": "2.0",
+    "apiVersion": "1",
+    "resourcePath": "/authors",
+    "apis": [
+        {
+            "path": "/authors",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all authors",
+                    "nickname": "Author",
+                    "type": "Author",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "type",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "get authors with specific type",
+                            "enum": [
+                                "reader",
+                                "preacher",
+                                "singer"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "lang",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "iso 2 code of language needed ex ar,en,fa if failed will return data with default language"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns all authors",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author by ID",
+                    "nickname": "Author",
+                    "type": "Author",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a author based on ID",
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}/lessons/series",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author lessons by ID",
+                    "nickname": "Lesson",
+                    "type": "Lesson",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a lessons based on Author ID",
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}/lessons/tracks",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author lessons single tracks by ID",
+                    "nickname": "Lesson",
+                    "type": "Lesson",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a lessons single tracks based on Author ID",
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}/quran/masahif",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author masahif by ID",
+                    "nickname": "Lesson",
+                    "type": "Lesson",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a masahif based on Author ID",
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}/quran/sura/{suraId}",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author sura by ID",
+                    "nickname": "Lesson",
+                    "type": "Lesson",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        },
+                        {
+                            "paramType": "path",
+                            "name": "suraId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of sura that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a sura based on Author ID and Sura id",
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}/quran/tracks",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author quran single tracks by ID",
+                    "nickname": "Lesson",
+                    "type": "Lesson",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a quran single tracks based on Author ID",
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}/songs/albums",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author songs by ID",
+                    "nickname": "Song",
+                    "type": "Song",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a songs based on Author ID",
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/authors/{authorId}/songs/tracks",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find author songs single tracks by ID",
+                    "nickname": "Lesson",
+                    "type": "Lesson",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "authorId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of author that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "not found"
+                        }
+                    ],
+                    "notes": "Returns a songs single tracks based on Author ID",
+                    "authorizations": {}
+                }
+            ]
+        }
+    ]
+}

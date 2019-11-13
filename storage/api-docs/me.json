@@ -1,0 +1,640 @@
+{
+    "basePath": "http://api.sadaislam.com/v1",
+    "swaggerVersion": "2.0",
+    "apiVersion": "1",
+    "resourcePath": "/me",
+    "apis": [
+        {
+            "path": "/me/favorites/lessons",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "favorites",
+                    "nickname": "favoritesLessons",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/favorites/quran",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "favorites",
+                    "nickname": "favoritesQuran",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/favorites/remove",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "add favorite",
+                    "nickname": "deleteFavorite",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "id",
+                            "type": "number",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "favorite id"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/favorites/songs",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "favorites",
+                    "nickname": "favoritesSongs",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/favorites/telawa",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "favorites",
+                    "nickname": "favoritesTelawa",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/favorites/{type}/add",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "add favorite",
+                    "nickname": "addFavorite",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        },
+                        {
+                            "paramType": "path",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "get authors with specific type",
+                            "enum": [
+                                "song",
+                                "lesson",
+                                "sura",
+                                "telawa"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "track_id",
+                            "type": "number",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "get authors with specific type"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/playlists",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get playlists",
+                    "nickname": "playlists",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/playlists/add",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "add new playlist",
+                    "nickname": "addList",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "name",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "playlist name"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/playlists/remove",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "remove playlist",
+                    "nickname": "deleteList",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "id",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "playlist id"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/playlists/{id}/{type}/add",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "add item to playlist",
+                    "nickname": "addItem",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        },
+                        {
+                            "paramType": "path",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "type",
+                            "enum": [
+                                "song",
+                                "lesson",
+                                "sura",
+                                "telawa"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "track_id",
+                            "type": "number",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "type"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/playlists/{playlistId}/remove",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "remove item from playlist",
+                    "nickname": "deleteItem",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        },
+                        {
+                            "paramType": "path",
+                            "name": "playlistId",
+                            "type": "number",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "type"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "id",
+                            "type": "number",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "item id"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/me/update",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "update user info",
+                    "nickname": "updateInfo",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-KEY",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth key"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "SI-USER-API-SECRET",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user auth secret"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "name",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user full name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "email",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "user email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "username",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "username"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "password",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "password"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        }
+    ]
+}

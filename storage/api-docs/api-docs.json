@@ -1,0 +1,38 @@
+{
+    "apiVersion": "1",
+    "swaggerVersion": "2.0",
+    "apis": [
+        {
+            "path": "/statistics"
+        },
+        {
+            "path": "/auth"
+        },
+        {
+            "path": "/authors"
+        },
+        {
+            "path": "/general"
+        },
+        {
+            "path": "/lessons"
+        },
+        {
+            "path": "/me"
+        },
+        {
+            "path": "/quran"
+        },
+        {
+            "path": "/search"
+        },
+        {
+            "path": "/songs"
+        }
+    ],
+    "info": {
+        "title": "SadaIslam App",
+        "description": "This is a api docs for sadaislam application.",
+        "contact": "info@sadaislam.com"
+    }
+}

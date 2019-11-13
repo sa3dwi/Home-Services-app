@@ -1,0 +1,34 @@
+{
+    "basePath": "http://api.sadaislam.com/v1",
+    "swaggerVersion": "2.0",
+    "apiVersion": "1",
+    "resourcePath": "/statistics",
+    "apis": [
+        {
+            "path": "/statistics",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all statistics",
+                    "nickname": "Statistics Query",
+                    "type": "Statistics",
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns all Statistics",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        }
+    ]
+}

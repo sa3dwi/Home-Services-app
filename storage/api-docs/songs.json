@@ -1,0 +1,246 @@
+{
+    "basePath": "http://api.sadaislam.com/v1",
+    "swaggerVersion": "2.0",
+    "apiVersion": "1",
+    "resourcePath": "/songs",
+    "apis": [
+        {
+            "path": "/songs/albums",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all songs albums",
+                    "nickname": "Album",
+                    "type": "Album",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "lang",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "iso 2 code of language needed ex ar,en,fa if failed will return data with default language"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns all songs albums",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/songs/categories",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all songs categories",
+                    "nickname": "Album",
+                    "type": "Album",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "lang",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "iso 2 code of language needed ex ar,en,fa if failed will return data with default language"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns all songs categories",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/songs/categories/{categoryId}/albums",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all category albums",
+                    "nickname": "Album",
+                    "type": "Album",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "categoryId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of category that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "lang",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "iso 2 code of language needed ex ar,en,fa if failed will return data with default language"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns all category albums",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/songs/categories/{categoryId}/tracks",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all category tracks",
+                    "nickname": "Album",
+                    "type": "Album",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "categoryId",
+                            "type": "integer",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "ID of category that needs to be fetched",
+                            "format": "int64",
+                            "minimum": "1.0",
+                            "maximum": "100000.0"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "lang",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "iso 2 code of language needed ex ar,en,fa if failed will return data with default language"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns all category tracks",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/songs/latest",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all latest songs",
+                    "nickname": "Series",
+                    "type": "Series",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "lang",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "iso 2 code of language needed ex ar,en,fa if failed will return data with default language"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns all latest songs",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        },
+        {
+            "path": "/songs/most-played",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get most-played songs",
+                    "nickname": "Series",
+                    "type": "Series",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "lang",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "iso 2 code of language needed ex ar,en,fa if failed will return data with default language"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Not found"
+                        }
+                    ],
+                    "notes": "Returns most-played songs",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "authorizations": {}
+                }
+            ]
+        }
+    ]
+}
